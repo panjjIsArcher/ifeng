@@ -1,31 +1,26 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div>
+        <NavContain></NavContain>
+        <router-view></router-view>
+        <router-view name="news"></router-view>
+        <Foot></Foot>
     </div>
-    <router-view/>
-  </div>
 </template>
+<script>
+import NavContain from "./components/nav/NavContain";
+import Content from "./components/content/Content";
+import Foot from "./components/foot/Foot";
+import Detail from "./components/detail/Detail";
+import Register from './components/login/register';
+import news from "./components/detail/news";
+export default {
+  components:{
+    NavContain,
+    Content,
+    Foot,
+    Detail}
+}
+</script>
+<style scoped>
 
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

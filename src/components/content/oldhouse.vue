@@ -1,0 +1,61 @@
+<template>
+    <newhouse :title="title" :secondhouse="secondhouse" :imgtxtBlockSixImgBox="imgtxtBlockSixImgBox"></newhouse>
+</template>
+<script>
+import Newhouse from "./NewHouse";
+export default {
+    data(){
+        return{
+            title:"二手房",
+            secondhouse:[
+                {
+                    location:"[丰台]青塔近14号线(西段)郭庄子店",
+                    name:"万科紫苑",
+                    price:"695万/套"
+                },
+                {
+                    location:"[昌平]回龙观近13号线泷泽站",
+                    name:"新龙城",
+                    price:"515万/套"
+                },
+            ],
+            imgtxtBlockSixImgBox:[
+                 {
+                    location:"[朝阳]内环西路招商都会中心",
+                    name:"招商都会湾",
+                    price:"500万/套"
+                },
+                {
+                    location:"[丰台]东五环化工桥京津高速2A出口",
+                    name:"太湖银河湾",
+                    price:"600万/套"
+                },
+                {
+                    location:"[丰台]角门西近10号线角门西站100米",
+                    name:"阳光城·君山墅",
+                    price:"700万/套"
+                },
+                {
+                    location:"[朝阳]内环西路招商都会中心",
+                    name:"招商都会湾",
+                    price:"500万/套"
+                },
+                {
+                    location:"[丰台]东五环化工桥京津高速2A出口",
+                    name:"太湖银河湾",
+                    price:"600万/套"
+                },
+                {
+                    location:"[丰台]角门西近10号线角门西站100米",
+                    name:"阳光城·君山墅",
+                    price:"700万/套"
+                },
+            ]
+        }
+    },
+    components:{Newhouse}
+}
+</script>
+<style>
+
+</style>

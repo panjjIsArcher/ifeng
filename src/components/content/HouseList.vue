@@ -1,0 +1,64 @@
+<template>
+    <div>
+        <newhouse :title="title" :imgtxtBlockSixImgBox="imgtxtBlockSixImgBox" :secondhouse="secondhouse"></newhouse>
+    </div>
+</template>
+<script>
+import Newhouse from "./NewHouse"
+export default {
+    data(){
+        return{
+            title:"新房·一手房",
+            secondhouse:[
+                {
+                    location:"[怀柔]京承高速14出口西行1000米",
+                    name:"东亚尚院",
+                    price:"1105万/套"
+                },
+                {
+                    location:"[昌平]北七家镇立汤路与北清路交汇",
+                    name:"华润·理想国",
+                    price:"430万/套"
+                },
+            ],
+            imgtxtBlockSixImgBox:[
+                 {
+                    location:"[朝阳]北京市1号线国贸站D出口2000米",
+                    name:"国贸第一城",
+                    price:"200万/套"
+                },
+                {
+                    location:"[亦庄]北京市亦庄经济开发区202路12号",
+                    name:"亦庄金茂府",
+                    price:"1100万/套"
+                },
+                {
+                    location:"[丰台]角门西近10号线角门西站100米",
+                    name:"阳光城·君山墅",
+                    price:"700万/套"
+                },
+                {
+                    location:"[朝阳]北京市1号线国贸站D出口2000米",
+                    name:"国贸第一城",
+                    price:"200万/套"
+                },
+                {
+                    location:"[亦庄]北京市亦庄经济开发区202路12号",
+                    name:"亦庄金茂府",
+                    price:"1100万/套"
+                },
+                {
+                    location:"[丰台]角门西近10号线角门西站100米",
+                    name:"阳光城·君山墅",
+                    price:"700万/套"
+                },
+            ]
+        }
+    },
+    components:{
+        Newhouse,
+    }
+}
+</script>
+<style>
+</style>

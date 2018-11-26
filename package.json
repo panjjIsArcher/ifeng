@@ -3,21 +3,38 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "server": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "mock": "json-server --watch mock/db.json",
+    "mockdev": "npm run mock & npm run dev "
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "element-ui": "^2.4.5",
+    "express": "^4.16.4",
+    "glob": "^7.1.3",
+    "jsonp": "^0.2.1",
+    "mint-ui": "^2.2.13",
     "vue": "^2.5.16",
+    "vue-axios": "^2.1.4",
+    "vue-resource": "^1.5.1",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "webticker": "^3.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.15",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
     "@vue/cli-service": "^3.0.0-beta.15",
     "@vue/eslint-config-prettier": "^3.0.0-rc.3",
-    "vue-template-compiler": "^2.5.16"
+    "jquery": "^3.3.1",
+    "json-server": "^0.14.0",
+    "swiper": "^4.4.2",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.19.1"
   },
   "eslintConfig": {
     "root": true,
