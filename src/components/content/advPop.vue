@@ -28,7 +28,7 @@ export default {
 .advPop{
     height:250px;
     width:300px;
-    z-index: 2;
+    z-index: 1000;
     float: right;
     position: fixed;
     right: 0;

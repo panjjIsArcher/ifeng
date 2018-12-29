@@ -21,7 +21,7 @@
             </div>
     <!-- 滚动新闻 -->
         <div class="scroll-news">
-            <span>今日新闻：</span>s
+            <span>今日新闻：</span>
             <div class="content-news">
                 <ul>
                     <li v-for="item in Scrollnews"><a href="">{{item.list}}</a></li>
@@ -69,24 +69,22 @@ export default {
         }
     },
     created(){
-        this.$axios.get("api/content-news").then((response)=>{
-            this.Scrollnews=response.data;
-        }).catch((error)=>{
-            console.log('sorry')
+        this.$axios.get("api/content-news").then((response) => {
+           this.Scrollnews = response.data;
+        }).catch((error) => {
+            console.log(err)
         });
-        var mySwiper=document.getElementsByClassName('swiper-container').swiper;
-        mySwiper.slideNext();
-        mySwiper.slidePrev();
-        var mySwiper =new Swiper(".swiper-container",{
-            speed:300,
-            pagination: '.swiper-pagination',
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            autoplay: {
-                delay: 1000,
-             },
-            loop:true
-        })
+        var mySwiper = document.getElementsByClassName('swiper-container').swiper;
+        // var mySwiper = new Swiper(".swiper-container",{
+        //     speed:300,
+        //     pagination: '.swiper-pagination',
+        //     nextButton: '.swiper-button-next',
+        //     prevButton: '.swiper-button-prev',
+        //     autoplay: {
+        //         delay: 1000,
+        //     },
+        //     loop:true
+        // })
         
     },
     components:{LittleNews,News,NewHouse,NavVertical,Office,Vip,advPop,HouseList,OldHouse},

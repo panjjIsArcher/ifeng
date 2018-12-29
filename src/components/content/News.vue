@@ -42,7 +42,6 @@
                 </a>
                 <ul>
                     <li v-for="item in newsright"><a href="javascript:;" >{{item.title}}</a></li>
-                   
                 </ul>
             </div>
             <div>

@@ -9,7 +9,7 @@
                     <div @click="filterFromHtoL(defaultItems)">价格从高到低</div>
                     <div @click="filterFromLtoH(defaultItems)">价格从低到高</div>
                 </div>
-            </div>
+            </div> 
             <div  @mouseover="onmouseShow('sale-list-choose')" @mouseout="onmouseHide('sale-list-choose')">
                 <div class="salelist">面积</div>
                 <div class="hide" id="sale-list-choose">
@@ -94,7 +94,7 @@ export default {
         },
         // 把项目的id传给详情页
         sendID:function(item){
-            this.$emit('select', item)
+           this.$emit('select',item)
         },
         filterFromLtoH,filterFromHtoL,areaFromHtoL,areaFromLtoH
     },
@@ -102,7 +102,7 @@ export default {
         this.$axios.get("api/defaultItems").then((res)=>{
             this.defaultItems=res.data;
         }).catch((err)=>{
-            console.log("error")
+            console.log(err)
         });
     },
 }

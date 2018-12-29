@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-// 引入组件
 import Content from "../components/content/Content";
 import HotCity from "../components/nav/city/hotcity";
 import fromAtoK from "../components/nav/city/fromAtoK";
@@ -22,13 +21,13 @@ export default new VueRouter({
             path:'/news',
             name:"news",
             components:{
-                news:resolve=>require(["../components/detail/news"],resolve)
+                news:resolve => require(["../components/detail/news"],resolve)
                        },
             children:[
                 {
                     path:'detail',
                     components:{
-                        detail:resolve=>require(["../components/detail/Detail"],resolve)
+                        detail:resolve => require(["../components/detail/Detail"],resolve)
                     }
                 }
             ]

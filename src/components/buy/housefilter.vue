@@ -5,15 +5,15 @@
            <dl class="locationTable">
                <dt>位置</dt>
                <dd class="search00" >
-                   <span class="subwaySearch_on locationCommon" @click="changeLocationSelect(0,$event)">地铁找房</span>
+                   <span class = "subwaySearch_on locationCommon" @click="changeLocationSelect(0,$event)">地铁找房</span>
                </dd>
                <dd class="search00" >
-                   <span class="lineSearch locationCommon" @click="changeLocationSelect(1,$event)">环线找房</span>
-               </dd>
+                   <span class = "lineSearch locationCommon" @click="changeLocationSelect(1,$event)">环线找房</span>
+               </dd >
                <dd class="search00">
                    <span class="zoneSearch locationCommon"  @click="changeLocationSelect(2,$event)">区域找房</span>
                </dd>
-               <dd v-for="(item,index) in location_select" class="searchcontent" v-if="index==showindex">
+               <dd v-for = "(item,index) in location_select" class="searchcontent" v-if="index==showindex">
                    <div><ul><li v-for="(son_item,son_index) in item.name" class="searchcontent_list">{{son_item.name}}</li></ul></div>
                </dd>
            </dl>
@@ -48,7 +48,9 @@ export default {
                     {name:"8号线"},
                     {name:"9号线"},
                     {name:"10号线"},
-                    {name:"八通线"}]},
+                    {name:"八通线"}
+                    ]
+                },
             {
                 name:[
                     {name:"全部"},
@@ -110,12 +112,12 @@ export default {
     },
     methods:{
         changeLocationSelect:function(param,event){
-            this.showindex=param;
-            if(param==0){
+            this.showindex = param;
+            if(param == 0){
             $(event.target).addClass("subwaySearch_on").removeClass("subwaySearch");
             $(".locationCommon").eq(1).addClass("lineSearch").removeClass("lineSearch_on");
             $(".locationCommon").eq(2).addClass("zoneSearch").removeClass("zoneSearch_on");
-            }else if(param==1){
+            }else if(param == 1){
             $(event.target).addClass("lineSearch_on").removeClass("lineSearch");
             $(".locationCommon").eq(0).addClass("subwaySearch").removeClass("subwaySearch_on")
             $(".locationCommon").eq(2).addClass("zoneSearch").removeClass("zoneSearch_on")
@@ -129,8 +131,8 @@ export default {
             $(event.target).addClass("search01").removeClass("search00").siblings().addClass("search00").removeClass("search01");
         },
          SelectAll:function(event){
-            var param= $(event.target).parent().children().eq(0).html();
-            if(param=="户型"){
+            var param = $(event.target).parent().children().eq(0).html();
+            if(param == "户型"){
                 switch($(event.target).html()){
                     case "一居":
                     this.$set(this.selectArr,0,"1居")
@@ -145,7 +147,7 @@ export default {
                     this.$set(this.selectArr,0,"4居")
                     break;
                 }
-            }else if(param=="均价"){
+            }else if(param == "均价"){
                 switch($(event.target).html()){
                     case "2万以下":
                     this.$set(this.selectArr,1,[0,2])
@@ -178,9 +180,7 @@ export default {
                     this.$set(this.selectArr,2,"办公楼")
                     break;
                 }
-                
             }
-            console.log(this.selectArr)
         },
     }
 }

@@ -15,12 +15,8 @@ import Register from './components/login/register';
 import news from "./components/detail/news";
 export default {
   components:{
-    NavContain,
-    Content,
-    Foot,
-    Detail}
+    NavContain,Content,Foot,Detail}
 }
 </script>
 <style scoped>
-
 </style>

@@ -113,12 +113,12 @@ export default {
         this.$axios.get("api/newsList").then((res)=>{
             this.newslist=res.data;
         }).catch((err)=>{
-            console.log("error")
+            console.log(err)
         });
         this.$axios.get("api/hot-news").then((res)=>{
             this.hotNews=res.data;
         }).catch((err)=>{
-            console.log("error")
+            console.log(err)
         })
     },
 }
